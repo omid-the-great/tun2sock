@@ -37,6 +37,6 @@ jobs:
     - name: Upload libtun2socks to release
       uses: svenstaro/upload-release-action@v2
       with:
-        file: ./libs/*/*.so
+        file: ./libs/**/* 
         tag: ${{ github.ref }}
         file_glob: true
