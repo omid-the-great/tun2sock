@@ -36,7 +36,7 @@ jobs:
     - name: Upload libtun2socks to release
       uses: svenstaro/upload-release-action@v2
       with:
-        files: |
+        file: |
           ./libs/armeabi-v7a/*.so,
           ./libs/x86/*.so,
           ./libs/x86_64/*.so
