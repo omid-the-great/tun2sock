@@ -36,6 +36,10 @@ jobs:
     - name: Upload libtun2socks to release
       uses: svenstaro/upload-release-action@v2
       with:
-        file: ./libs/*/*.so
+        files: |
+          ./libs/armeabi-v7a/*.so,
+          ./libs/x86/*.so,
+          ./libs/x86_64/*.so
+          ./libs/arm64-v8a/*.so
         tag: ${{ github.ref }}
         file_glob: true
