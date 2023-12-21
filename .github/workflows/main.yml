@@ -33,3 +33,9 @@ jobs:
          ./compile-tun2socks.sh
       env:
          NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
+    - name: Upload libtun2socks to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        file: ./libs/*/*.so
+        tag: ${{ github.ref }}
+        file_glob: true
