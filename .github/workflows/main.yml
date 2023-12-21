@@ -32,6 +32,8 @@ jobs:
       run: |
          chmod +x compile-tun2socks.sh
          ./compile-tun2socks.sh
+         echo "-----------------------------------------------"
+         ls
       env:
          NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
     - name: Create zip file
